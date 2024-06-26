@@ -5,7 +5,7 @@ document.getElementById("display").innerHTML = ("New Guess Started");
 
 
 function checkNumber(){
-    if(chances>1){
+    if(chances>0){
         let newNum = new Number(document.getElementById("Guess").value);
         if(randomNumber==newNum){
             document.getElementById("display").innerHTML = ("You Won !!! 😀, Try New Guess");
@@ -13,10 +13,10 @@ function checkNumber(){
             document.getElementById("Guess").disabled = true;
         }else if(newNum<randomNumber){
             chances--;
-            document.getElementById("display").innerHTML = ("Invalid Try Something Higer - " + chances + " Chances left");
+            document.getElementById("display").innerHTML = ("Invalid!! Guess is too Low  - " + chances + " Chances left");
         }else{
             chances--;
-            document.getElementById("display").innerHTML = ("Invalid Try Something Lower - " + chances + " Chances left");
+            document.getElementById("display").innerHTML = ("Invalid!! Guess is too High - " + chances + " Chances left");
         }
     }else{
         document.getElementById("display").innerHTML= ("No Chances Left !!! 😥, Try New Guess");
