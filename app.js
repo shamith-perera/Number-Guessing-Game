@@ -10,6 +10,7 @@ function checkNumber(){
         if(randomNumber==newNum){
             document.getElementById("display").innerHTML = ("You Won !!! 😀, Try New Guess");
             document.getElementById("btnGuess").disabled = true;
+            document.getElementById("Guess").disabled = true;
         }else if(newNum<randomNumber){
             chances--;
             document.getElementById("display").innerHTML = ("Invalid Try Something Higer - " + chances + " Chances left");
@@ -20,6 +21,7 @@ function checkNumber(){
     }else{
         document.getElementById("display").innerHTML= ("No Chances Left !!! 😥, Try New Guess");
         document.getElementById("btnGuess").disabled = true;
+        document.getElementById("Guess").disabled = true;
     }
 
 }
@@ -29,5 +31,6 @@ function setNewNumber() {
     document.getElementById("display").innerHTML = ("New Guess Started");
     chances=3;
     document.getElementById("btnGuess").disabled = false;
-
+    document.getElementById("Guess").value ="";
+    document.getElementById("Guess").disabled = false;
 }
